@@ -1,0 +1,10 @@
+<h1>Listado de Aerolíneas</h1>
+<div class="grid">
+  <div 
+    *ngFor="let a of airlines"
+    class="card"
+    [ngStyle]="{ 'background-color': a.identityColor }"
+  >
+    {{ a.airlineName }}
+  </div>
+</div>

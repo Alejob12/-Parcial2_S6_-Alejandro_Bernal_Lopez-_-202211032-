@@ -1,0 +1,22 @@
+<div class="container" *ngIf="airline">
+  <div 
+    class="info-card"
+    [ngStyle]="{ 'background-color': airline.identityColor }"
+  >
+    <h2>{{ airline.airlineName }}</h2>
+    <p><strong>País:</strong> {{ airline.country }}</p>
+    <p><strong>Ciudad:</strong> {{ airline.city }}</p>
+    <p><strong>Dirección:</strong> {{ airline.address }}</p>
+    <p><strong>Lema:</strong> {{ airline.slogan }}</p>
+  </div>
+
+  <div class="flights-list">
+    <h3>Vuelos</h3>
+    <div *ngFor="let f of airline.flights" class="flight-card">
+      <p><strong>Salida:</strong> {{ f.departureCity }} ({{ f.departureAirport }})</p>
+      <p><strong>Llega:</strong> {{ f.arrivalCity }} ({{ f.arrivalAirport }})</p>
+      <p><strong>Hora:</strong> {{ f.departureTime }} &mdash; {{ f.flightDuration }}h</p>
+      <img [src]="f.image" alt="Imagen vuelo" />
+    </div>
+  </div>
+</div>

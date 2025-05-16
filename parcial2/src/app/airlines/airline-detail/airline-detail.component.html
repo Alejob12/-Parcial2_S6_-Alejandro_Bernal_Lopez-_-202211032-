@@ -1,0 +1,8 @@
+<div class="detail-card" *ngIf="airline">
+  <h2>{{ airline.airlineName }}</h2>
+  <p><strong>País:</strong> {{ airline.country }}</p>
+  <p><strong>Ciudad:</strong> {{ airline.city }}</p>
+  <p><strong>Dirección:</strong> {{ airline.address }}</p>
+  <p><strong>Lema:</strong> {{ airline.slogan }}</p>
+  <button (click)="goToFlights()">Ver Vuelos</button>
+</div>
